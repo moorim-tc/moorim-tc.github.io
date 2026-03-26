@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOORIM T.C. | 회사 소개</title>
+    <meta name="description" content="MOORIM T.C. 회사 소개" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/ko/" aria-label="MOORIM T.C. 홈">
+          <img class="brand-mark" data-logo src="/assets/img/logo.png" alt="MOORIM T.C. 로고" />
+          <span class="brand-name" data-logo-fallback style="display:none">MOORIM T.C.</span>
+          <span class="brand-name">MOORIM T.C.</span>
+        </a>
+
+        <nav class="nav" aria-label="주 메뉴">
+          <a data-nav="about" href="/ko/">About</a>
+          <a data-nav="projects" href="/ko/projects/">Projects</a>
+          <a data-nav="products" href="/ko/products/">Products</a>
+          <a data-nav="contact" href="/ko/contact/">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="lang-link" data-lang-switch href="/en/">EN</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="kicker">Company</span>
+            <h1>신뢰를 기반으로, 지속 가능한 기술을 만듭니다.</h1>
+            <p class="lead">MOORIM T.C.는 (임시 문구) 고객의 문제를 명확히 정의하고, 실행 가능한 솔루션으로 연결하는 팀입니다. 이 페이지의 문구와 항목들은 편집 가능한 초안(placeholder)입니다.</p>
+            <div class="btn-row">
+              <a class="btn primary" href="/ko/projects/">포트폴리오 보기</a>
+              <a class="btn ghost" href="/ko/contact/">문의하기</a>
+            </div>
+          </div>
+          <div class="notice" aria-label="요약 정보">
+            <p><span class="footer-strong">핵심 분야</span></p>
+            <ul class="list">
+              <li>프로젝트 수행(placeholder)</li>
+              <li>제품 개발(placeholder)</li>
+              <li>운영/고도화(placeholder)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>회사 소개</h2>
+          <p>여기에 회사의 미션/비전/핵심가치를 간단히 소개하는 문구를 작성할 수 있습니다.</p>
+          <p>예: 우리는 고객의 비즈니스 목표를 기술로 구체화하고, 빠르게 검증하며, 안정적으로 운영합니다.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>제공 서비스(예시)</h2>
+          <div class="grid" role="list">
+            <article class="card" role="listitem">
+              <h3>컨설팅 & 기획</h3>
+              <p>요구사항 정리, 로드맵 수립, PoC(placeholder)</p>
+              <div class="meta">산출물: 기획서/와이어프레임</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>개발</h3>
+              <p>웹/모바일/백엔드 개발 및 통합(placeholder)</p>
+              <div class="meta">기술: HTML/CSS/JS 등</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>운영</h3>
+              <p>모니터링, 개선, 유지보수(placeholder)</p>
+              <div class="meta">범위: SLA/정기 점검</div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <div class="footer-strong" data-company-name>MOORIM T.C.</div>
+          <div class="small">Email: <a href="mailto:shkim@moorim-tc.com">shkim@moorim-tc.com</a></div>
+          <div class="small">Address: 서울시 영등포구 국제금융로2길 17 524호</div>
+        </div>
+        <div class="small">© <span id="y"></span> MOORIM T.C. All rights reserved.</div>
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

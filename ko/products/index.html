@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOORIM T.C. | 제품</title>
+    <meta name="description" content="MOORIM T.C. 제품 목록" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <script src="../../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/ko/" aria-label="MOORIM T.C. 홈">
+          <img class="brand-mark" data-logo src="/assets/img/logo.png" alt="MOORIM T.C. 로고" />
+          <span class="brand-name" data-logo-fallback style="display:none">MOORIM T.C.</span>
+          <span class="brand-name">MOORIM T.C.</span>
+        </a>
+
+        <nav class="nav" aria-label="주 메뉴">
+          <a data-nav="about" href="/ko/">About</a>
+          <a data-nav="projects" href="/ko/projects/">Projects</a>
+          <a data-nav="products" href="/ko/products/">Products</a>
+          <a data-nav="contact" href="/ko/contact/">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="lang-link" data-lang-switch href="/en/products/">EN</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <span class="kicker">Products</span>
+          <h1>제품</h1>
+          <p class="lead">제품 카드 샘플입니다. 제품명/설명/특징을 나중에 교체해 사용하세요.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid" role="list">
+            <article class="card" role="listitem">
+              <h3>Product 01 (샘플)</h3>
+              <p>업무 효율을 높이는 기능 요약(placeholder)</p>
+              <div class="meta">형태: SaaS · 상태: 준비중</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Product 02 (샘플)</h3>
+              <p>데이터 수집/정리/시각화(placeholder)</p>
+              <div class="meta">형태: Web App · 상태: 베타</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Product 03 (샘플)</h3>
+              <p>운영 자동화 도구(placeholder)</p>
+              <div class="meta">형태: Toolkit · 상태: 운영중</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Product 04 (샘플)</h3>
+              <p>품질/리스크 관리 기능(placeholder)</p>
+              <div class="meta">형태: Platform · 상태: 검토중</div>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Product 05 (샘플)</h3>
+              <p>고객 경험 개선을 위한 모듈(placeholder)</p>
+              <div class="meta">형태: Module · 상태: 계획</div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <div class="footer-strong" data-company-name>MOORIM T.C.</div>
+          <div class="small">Email: <a href="mailto:shkim@moorim-tc.com">shkim@moorim-tc.com</a></div>
+          <div class="small">Address: 서울시 영등포구 국제금융로2길 17 524호</div>
+        </div>
+        <div class="small">© <span id="y"></span> MOORIM T.C. All rights reserved.</div>
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
