@@ -121,6 +121,7 @@ a{color:inherit;}
   .hero{padding:2.2rem 0 1.5rem;}
   .hero-grid{grid-template-columns:1fr;}
   .nav{display:none;}
+  .hero .lead{font-size:1.1rem;}
 }
 
 .kicker{
@@ -138,6 +139,7 @@ a{color:inherit;}
 
 h1{font-size:2.15rem; line-height:1.2; margin:.9rem 0 .8rem;}
 .lead{color:var(--muted); font-size:1.05rem; margin:0 0 1.25rem;}
+.hero .lead{font-size:1.4rem;}
 
 .btn-row{display:flex; flex-wrap:wrap; gap:.75rem;}
 
