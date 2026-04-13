@@ -183,6 +183,40 @@
     });
   }
 
+  function initHeroRotator() {
+    const rotator = document.querySelector("[data-hero-rotator]");
+    if (!rotator) return;
+
+    const slides = Array.from(rotator.querySelectorAll("[data-hero-slide]"));
+    if (slides.length < 2) return;
+
+    let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+    if (activeIndex < 0) activeIndex = 0;
+
+    const setActiveSlide = (nextIndex) => {
+      slides.forEach((slide, index) => {
+        const isActive = index === nextIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+      });
+      activeIndex = nextIndex;
+    };
+
+    let intervalId = window.setInterval(() => {
+      setActiveSlide((activeIndex + 1) % slides.length);
+    }, 4600);
+
+    rotator.addEventListener("mouseenter", () => {
+      window.clearInterval(intervalId);
+    });
+
+    rotator.addEventListener("mouseleave", () => {
+      intervalId = window.setInterval(() => {
+        setActiveSlide((activeIndex + 1) % slides.length);
+      }, 4600);
+    });
+  }
+
   function init() {
     patchRootRelativeAnchorsForFileProtocol();
 
@@ -192,6 +226,7 @@
       setActiveNav(lang);
       setLangSwitch(lang);
       fixLogoForFileProtocol();
+      initHeroRotator();
 
       const footerName = document.querySelector("[data-company-name]");
       if (footerName) footerName.textContent = SITE_NAME;

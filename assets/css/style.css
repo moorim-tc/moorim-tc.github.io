@@ -566,17 +566,64 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
 }
 
 .landing-bars{
-  display:grid;
-  gap:.7rem;
+  position:relative;
   padding:1.3rem;
   border-radius:24px;
+  min-height:19.5rem;
+  overflow:hidden;
+  border:1px solid rgba(203,213,225,.12);
+  background:rgba(148,163,184,.08);
+  box-shadow:none;
 }
 
-.landing-bars span{
+.landing-rotator-slide{
+  position:absolute;
+  inset:1.3rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:.8rem;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.landing-rotator-slide.is-active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  animation:landing-rotator-fade 1s ease;
+}
+
+@keyframes landing-rotator-fade{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.landing-rotator-slide strong{
   display:block;
-  height:2.85rem;
-  border-radius:14px;
-  background:linear-gradient(90deg, rgba(88,136,255,.92), rgba(116,172,255,.62));
+  color:#f7faff;
+  font-size:1.35rem;
+  letter-spacing:-.03em;
+}
+
+.landing-rotator-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:.8rem;
+  justify-items:start;
+}
+
+.landing-rotator-list li{
+  padding:.8rem 1rem;
+  border-radius:18px;
+  width:fit-content;
+  max-width:100%;
+  background:rgba(148,163,184,.12);
+  color:#f7faff;
+  font-weight:650;
 }
 
 .landing-insight-card{
