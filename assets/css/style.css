@@ -130,7 +130,8 @@ a{color:inherit;}
   display:grid;
   grid-template-columns:1.25fr .75fr;
   gap:1.75rem;
-  align-items:center;
+  align-items:start;
+  padding-block:.5rem;
 }
 @media (max-width:900px){
   .hero{padding:3.2rem 0 2.4rem;}
@@ -255,6 +256,28 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
 
 .cards-4{display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:1rem;}
 .service-card p{margin:.35rem 0 0;}
+
+.service-card .card-head{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:.35rem;
+}
+
+.service-card .card-head .flow-icon{
+  margin-bottom:0;
+  flex:0 0 auto;
+  width:35px;
+  height:35px;
+}
+
+.service-card .card-head .flow-icon svg{width:18px; height:18px;}
+
+.service-card .card-head h3{
+  margin:0;
+}
+
+.service-card .list{margin:.1rem 0 0;}
 
 .about-split{
   display:grid;
