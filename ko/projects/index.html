@@ -14,15 +14,12 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="/ko/" aria-label="MOORIM EDS 홈">
-          <img class="brand-mark" data-logo src="/assets/img/logo.png" alt="MOORIM EDS 로고" />
-          <span class="brand-name" data-logo-fallback style="display:none">MOORIM EDS</span>
           <span class="brand-name">MOORIM EDS</span>
         </a>
 
         <nav class="nav" aria-label="주 메뉴">
           <a data-nav="about" href="/ko/">About</a>
           <a data-nav="projects" href="/ko/projects/">Projects</a>
-          <a data-nav="products" href="/ko/products/">Products</a>
           <a data-nav="contact" href="/ko/contact/">Contact</a>
         </nav>
 
@@ -37,7 +34,7 @@
         <div class="container">
           <span class="kicker">Projects</span>
           <h1>프로젝트</h1>
-          <p class="lead">MOORIM EDS의 프로젝트 수행 이력입니다. 기간 표기는 연도 기준으로 정리했습니다.</p>
+          <p class="lead">MOORIM EDS의 프로젝트 수행 이력입니다.</p>
         </div>
       </section>
 
@@ -45,8 +42,9 @@
         <div class="container">
           <div class="grid" role="list">
             <article class="card" role="listitem">
-              <h3>[HMC] 승객 승차감 예측 모델 개발 및 안면 인식 생체 신호 계측 시스템 구축</h3>
-              <p>과거 학습 모델을 탑재한 디바이스로 멀미 여부를 판단하고, 차량 가속도·안면 데이터·반응 신호를 동시 수집하는 시스템을 구축했습니다.</p>
+              <h3>승객 승차감 예측 모델 개발 및 안면 인식 생체 신호 계측 시스템 구축</h3>
+              <p>차량 가속도·안면 데이터·승객 반응 신호를 시간 동기화하여 수집하고, 모델 학습/검증을 위한 데이터셋 형태로 구조화했습니다.</p>
+              <p>학습된 모델을 디바이스에 탑재해 현장에서 추론과 데이터 로깅을 동시에 수행하도록 구성했습니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2025</span><span class="tag">Ride comfort</span><span class="tag">Biometrics</span><span class="tag">On-device</span><span class="tag">Data capture</span>
               </div>
@@ -54,8 +52,9 @@
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] 오프로드 픽업 메가 차량 승차감 개선을 위한 선행 연구</h3>
-              <p>신규 개발 차량의 승차감 수준을 평가하고, 가속도 센서 데이터를 시계열/주파수 관점에서 분석해 상태 진단과 개선 방향을 도출했습니다.</p>
+              <h3>차량 승차감 개선을 위한 데이터 수집 및 분석</h3>
+              <p>가속도 센서 시계열 데이터를 수집하고, 주파수(FFT) 분석과 시계열 분석을 통해 문제점을 진단했습니다.</p>
+              <p>분석 결과를 기반으로 승차감 수준을 정량화하고 개선 방향을 도출했습니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2025</span><span class="tag">IMU</span><span class="tag">Time-series</span><span class="tag">FFT</span><span class="tag">Diagnostics</span>
               </div>
@@ -63,8 +62,9 @@
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] 포터블 하중변위(외판강성) 측정 TOOL 측정모드 추가 개발</h3>
-              <p>아루코 마커와 산업용 카메라를 활용해 대상체의 6자유도 자세(6DoF)를 측정하는 포터블 계측 시스템의 측정 모드를 확장했습니다.</p>
+              <h3>다중 마커 자세 추적 시스템 개발</h3>
+              <p>마커와 산업용 카메라로 6자유도(6DoF) 자세/변위를 추정해 계측 대상의 변형 데이터를 생성하는 파이프라인을 구축했습니다.</p>
+              <p>현장에서 간편하게 사용할 수 있도록 시스템을 최적화했습니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2025</span><span class="tag">ArUco</span><span class="tag">Industrial camera</span><span class="tag">6DoF</span><span class="tag">Metrology</span>
               </div>
@@ -72,26 +72,19 @@
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] 자율 주행 시 안면 인식 생체 신호를 통한 승객 스트레스 추정 모델 개발</h3>
-              <p>안드로이드 디바이스로 주행 중 차량/승객 상태 데이터를 수집하고, 이를 기반으로 승객 스트레스 예측 모델을 개발했습니다.</p>
+              <h3>안면 인식 생체 신호를 통한 승객 스트레스 추정 모델 개발</h3>
+              <p>주행 중 차량/승객 상태 신호(안면·생체 등)를 카메라 기반으로 수집하고 데이터셋으로 축적했습니다.</p>
+              <p>수집 데이터로 스트레스 추정 모델을 학습/검증할 수 있는 입력 구조와 파이프라인을 정리했습니다.</p>
               <div class="tags" aria-label="Tech keywords">
-                <span class="tag">2024</span><span class="tag">Android</span><span class="tag">Biometrics</span><span class="tag">Stress model</span><span class="tag">Data logging</span>
+                <span class="tag">2024</span><span class="tag">Camera</span><span class="tag">Biometrics</span><span class="tag">Stress model</span><span class="tag">Data logging</span>
               </div>
               <div class="meta">연도: 2024 · 고객: HMC</div>
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] 자율주행 시 승객 스트레스 요소 예측 빅데이터 모델 연구</h3>
-              <p>승객 스트레스 판별에 필요한 데이터 정의를 구체화하고, 차량 거동 외 안면 데이터/심박/피부 전도도(GSR) 등 수집 체계를 정립했습니다.</p>
-              <div class="tags" aria-label="Tech keywords">
-                <span class="tag">2023</span><span class="tag">Big data</span><span class="tag">Feature design</span><span class="tag">GSR</span><span class="tag">Heart rate</span>
-              </div>
-              <div class="meta">연도: 2023 · 고객: HMC</div>
-            </article>
-
-            <article class="card" role="listitem">
-              <h3>[HMC] 포터블 외판강성 측정기</h3>
-              <p>대형 유압 장비 기반 강성 측정기를 휴대폰·아루코 마커·무선 하중 측정 장치를 활용한 휴대형 기기로 대체하는 프로젝트를 수행했습니다.</p>
+              <h3>휴대용 강성 측정기</h3>
+              <p>모바일 디바이스(휴대폰)·아루코 마커·무선 하중 측정 장치를 결합해 하중–변위 데이터를 동시 수집했습니다.</p>
+              <p>현장에서의 손쉬운 사용을 위해 휴대폰과 모바일 애플리케이션 형태로 제작하였습니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2023</span><span class="tag">Portable tool</span><span class="tag">Smartphone</span><span class="tag">ArUco</span><span class="tag">Wireless load</span>
               </div>
@@ -99,8 +92,9 @@
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] 전기차 전용 플랫폼의 진동모드맵 평가 및 분석</h3>
-              <p>신규 개발 차량 내 각종 서브시스템의 고유진동수 배치를 규명하고, 진동 모드맵 관점에서 평가/분석했습니다.</p>
+              <h3>전기차 전용 플랫폼의 진동모드맵 평가 및 분석</h3>
+              <p>서브시스템별 고유진동수/응답 데이터를 정리해 모드맵 형태로 구조화하고 비교 가능한 지표로 만들었습니다.</p>
+              <p>분석 결과를 설계 검토 및 개선 판단에 활용할 수 있도록 정리했습니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2022</span><span class="tag">Modal analysis</span><span class="tag">Vibration map</span><span class="tag">EV platform</span>
               </div>
@@ -108,40 +102,15 @@
             </article>
 
             <article class="card" role="listitem">
-              <h3>[HMC] DKnC 활용 전기차 플랫폼 연성계 특성 설정 가이드</h3>
-              <p>전기차의 타이어 입력에 대한 차량 거동 특성의 주요 인자를 규명하고, 연성계 특성 설정을 위한 가이드를 정리했습니다.</p>
-              <div class="tags" aria-label="Tech keywords">
-                <span class="tag">2022</span><span class="tag">DKnC</span><span class="tag">Compliance</span><span class="tag">Tire input</span><span class="tag">Guideline</span>
-              </div>
-              <div class="meta">연도: 2022 · 고객: HMC</div>
-            </article>
-
-            <article class="card" role="listitem">
-              <h3>[HMC] 모바일 앱을 이용한 데이터 축적 앱 개발</h3>
-              <p>승객 스트레스 모델 개발을 위한 데이터 유형을 정립하고, 모바일 앱 기반의 데이터 축적(로깅) 앱을 개발했습니다.</p>
+              <h3>모바일 앱을 이용한 진동 데이터 수집 시스템 개발</h3>
+              <p>기계 시스템 작동 시 발생하는 진동 데이터를 모바일앱과 무선 센서로 수집합니다.</p>
+              <p>수집된 데이터를 분석하여 시스템의 고장 상태 등 진단에 활용합니다.</p>
               <div class="tags" aria-label="Tech keywords">
                 <span class="tag">2021</span><span class="tag">Mobile app</span><span class="tag">Data logging</span><span class="tag">Dataset</span>
               </div>
               <div class="meta">연도: 2021 · 고객: HMC</div>
             </article>
 
-            <article class="card" role="listitem">
-              <h3>[HMC] 외판강성 vs 계측평가 차이분석 및 감성 정량평가법 개발</h3>
-              <p>외판강성/계측평가 간 차이를 분석하고, 사용자의 감성을 정량화할 수 있는 평가법과 판단 기준을 설정했습니다.</p>
-              <div class="tags" aria-label="Tech keywords">
-                <span class="tag">2021</span><span class="tag">Evaluation</span><span class="tag">Quantification</span><span class="tag">Criteria</span>
-              </div>
-              <div class="meta">연도: 2021 · 고객: HMC</div>
-            </article>
-
-            <article class="card" role="listitem">
-              <h3>[HMC] 자율주행 시 샤시계변형(타이어 마모량 등) 모니터링 기술개발</h3>
-              <p>차량 자체 센서 데이터를 활용해 서스펜션 부품 이상 여부를 탐지하고, 샤시계 변형(타이어 마모 등) 징후를 모니터링하는 기술을 개발했습니다.</p>
-              <div class="tags" aria-label="Tech keywords">
-                <span class="tag">2020</span><span class="tag">Anomaly detection</span><span class="tag">Vehicle sensors</span><span class="tag">Suspension</span><span class="tag">Monitoring</span>
-              </div>
-              <div class="meta">연도: 2020 · 고객: HMC</div>
-            </article>
           </div>
         </div>
       </section>
@@ -157,7 +126,6 @@
         <nav class="footer-nav" aria-label="Footer">
           <a href="/ko/">About</a>
           <a href="/ko/projects/">Projects</a>
-          <a href="/ko/products/">Products</a>
           <a href="/ko/contact/">Contact</a>
         </nav>
       </div>

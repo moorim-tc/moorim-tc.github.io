@@ -254,7 +254,7 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
 .trust-item strong{display:block; margin:.1rem 0 .1rem;}
 .trust-item span{display:block; color:var(--muted); font-size:.94rem; line-height:1.35;}
 
-.cards-4{display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:1rem;}
+.cards-4{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem;}
 .service-card p{margin:.35rem 0 0;}
 
 .service-card .card-head{
@@ -312,9 +312,37 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
   color:var(--text);
 }
 
+.about-columns{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:1.25rem;
+  align-items:start;
+  margin-top:1rem;
+}
+
+.about-columns > div > p:first-child{margin-top:0;}
+
 
 .flow{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:1rem;}
 .flow-step{position:relative;}
+
+.flow-step .card-head{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:.35rem;
+}
+
+.flow-step .card-head .flow-icon{
+  margin-bottom:0;
+  flex:0 0 auto;
+  width:35px;
+  height:35px;
+}
+
+.flow-step .card-head .flow-icon svg{width:18px; height:18px;}
+
+.flow-step .card-head h3{margin:0;}
 .flow-step:not(:last-child)::after{
   content:"";
   position:absolute;
@@ -393,13 +421,14 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
   gap:1rem;
 }
 .card{
-  grid-column:span 4;
   padding:1.05rem;
   border:1px solid var(--border);
   background:var(--bg);
   border-radius:var(--radius);
   box-shadow:var(--shadow-sm);
 }
+
+.grid > .card{grid-column:span 4;}
 .card h3{margin:.2rem 0 .35rem; font-size:1.05rem;}
 .card p{margin:0; color:var(--muted); font-size:.95rem;}
 .card .meta{margin-top:.6rem; color:var(--muted); font-size:.9rem;}
@@ -407,8 +436,9 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
 .card:hover{transform:translateY(-1px); box-shadow:var(--shadow);}
 
 @media (max-width:900px){
-  .card{grid-column:span 6;}
+  .grid > .card{grid-column:span 6;}
   .about-split{grid-template-columns:1fr;}
+  .about-columns{grid-template-columns:1fr;}
   .trust-grid{grid-template-columns:1fr;}
   .cards-4{grid-template-columns:1fr;}
   .flow{grid-template-columns:1fr;}
@@ -417,7 +447,7 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
   .project-grid{grid-template-columns:1fr;}
 }
 @media (max-width:560px){
-  .card{grid-column:span 12;}
+  .grid > .card{grid-column:span 12;}
 }
 
 .list{margin:.4rem 0 0; padding-left:1.1rem; color:var(--muted);}
@@ -448,6 +478,15 @@ h1{font-size:clamp(2.1rem, 3.6vw, 3.1rem); line-height:1.12; margin:.9rem 0 .8re
   border:1px solid var(--border);
   background:var(--surface);
   border-radius:var(--radius);
+}
+
+.notice .footer-strong{color:var(--text);}
+
+.notice a[href^="mailto:"]{
+  color:var(--text);
+  font-weight:650;
+  text-decoration:underline;
+  text-underline-offset:2px;
 }
 
 .code{

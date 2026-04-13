@@ -164,30 +164,11 @@
     const btn = gate.querySelector(`[data-lang-btn="${recommended}"]`);
     if (btn) btn.classList.add("primary");
 
-    let cancelled = false;
-    let remaining = 3;
+    if (countdownEl) countdownEl.textContent = "0";
+    if (cancelBtn) cancelBtn.style.display = "none";
 
-    const tick = () => {
-      if (cancelled) return;
-      if (countdownEl) countdownEl.textContent = String(remaining);
-      if (remaining <= 0) {
-        location.href = href;
-        return;
-      }
-      remaining -= 1;
-      setTimeout(tick, 1000);
-    };
-
-    if (cancelBtn) {
-      cancelBtn.addEventListener("click", () => {
-        cancelled = true;
-        cancelBtn.setAttribute("disabled", "true");
-        cancelBtn.textContent = recommended === "ko" ? "자동 이동 취소됨" : "Auto-redirect cancelled";
-        if (countdownEl) countdownEl.textContent = "-";
-      });
-    }
-
-    setTimeout(tick, 800);
+    // Redirect immediately based on detected browser language.
+    location.replace(href);
   }
 
   function patchRootRelativeAnchorsForFileProtocol() {
