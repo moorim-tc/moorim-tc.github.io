@@ -1,4 +1,4 @@
-# MOORIM EDS — Company Website
+# MOORIM T.C. — Company Website
 
 Static multi-page website for GitHub Pages.
 

@@ -1,5 +1,5 @@
 (() => {
-  const SITE_NAME = "MOORIM EDS";
+  const SITE_NAME = "MOORIM T.C.";
 
   function normalizePathname(pathname) {
     if (!pathname) return "/";
